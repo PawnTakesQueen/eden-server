@@ -27,6 +27,10 @@
 
 package main
 
+import (
+  "golang.org/x/sys/unix"
+)
+
 var (
   facebookID string
   facebookPageAccessToken string
@@ -34,6 +38,8 @@ var (
 )
 
 func main() {
+  unix.Mlockall(unix.MCL_CURRENT | unix.MCL_FUTURE)
   getConfig()
   startWebhooks()
+  unix.Munlockall()
 }
