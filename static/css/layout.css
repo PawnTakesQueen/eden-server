@@ -1,0 +1,37 @@
+@font-face {
+  font-family: 'Raleway';
+  font-weight: 400;
+  font-style: normal;
+  src: local('Raleway Regular'), local('Raleway-400'), url('/fonts/raleway-400.woff') format('woff');
+}
+
+* {
+  word-wrap: break-word;
+}
+
+*:focus {
+  outline: none;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+}
+
+body img {
+  margin-top: 32px;
+  max-width: calc(100% - 64px);
+}
+
+#title {
+  color: #674172;
+  font-family: Raleway;
+  font-size: 128px;
+  font-weight: 400;
+  margin-top: 64px;
+}

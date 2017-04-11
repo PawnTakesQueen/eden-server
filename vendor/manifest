@@ -21,15 +21,21 @@
 			"branch": "master"
 		},
 		{
-			"importpath": "github.com/hashicorp/hcl",
-			"repository": "https://github.com/hashicorp/hcl",
-			"revision": "630949a3c5fa3c613328e1b8256052cbc2327c9b",
+			"importpath": "github.com/go-sql-driver/mysql",
+			"repository": "https://github.com/go-sql-driver/mysql",
+			"revision": "9dee4ca50b83acdf57a35fb9e6fb4be640afa2f3",
 			"branch": "master"
 		},
 		{
-			"importpath": "github.com/huandu/facebook",
-			"repository": "https://github.com/huandu/facebook",
-			"revision": "efe962f32209aa6e7430fb779bdf29bbcdb716e1",
+			"importpath": "github.com/gorilla/mux",
+			"repository": "https://github.com/gorilla/mux",
+			"revision": "599cba5e7b6137d46ddf58fb1765f5d928e69604",
+			"branch": "master"
+		},
+		{
+			"importpath": "github.com/hashicorp/hcl",
+			"repository": "https://github.com/hashicorp/hcl",
+			"revision": "630949a3c5fa3c613328e1b8256052cbc2327c9b",
 			"branch": "master"
 		},
 		{
@@ -53,7 +59,7 @@
 		{
 			"importpath": "github.com/pelletier/go-toml",
 			"repository": "https://github.com/pelletier/go-toml",
-			"revision": "e32a2e04744250647a72bf17da1b09befc03b6b1",
+			"revision": "fe206efb84b2bc8e8cfafe6b4c1826622be969e3",
 			"branch": "master"
 		},
 		{
@@ -77,13 +83,13 @@
 		{
 			"importpath": "github.com/spf13/pflag",
 			"repository": "https://github.com/spf13/pflag",
-			"revision": "d16db1e50e33dff1b6cdf37596cef36742128670",
+			"revision": "9a906f17374922ed0f74e1b2f593d3723f2ffb00",
 			"branch": "master"
 		},
 		{
 			"importpath": "github.com/spf13/viper",
 			"repository": "https://github.com/spf13/viper",
-			"revision": "84f94806c67f59dd7ae87bc5351f7a9c94a4558d",
+			"revision": "5d46e70da8c0b6f812e0b170b7a985753b5c63cb",
 			"branch": "master"
 		},
 		{
@@ -117,42 +123,56 @@
 		{
 			"importpath": "golang.org/x/crypto/cast5",
 			"repository": "https://go.googlesource.com/crypto",
-			"revision": "3cb07270c9455e8ad27956a70891c962d121a228",
+			"revision": "9ef620b9ca2f82b55030ffd4f41327fa9e77a92c",
 			"branch": "master",
 			"path": "/cast5"
 		},
 		{
 			"importpath": "golang.org/x/crypto/openpgp",
 			"repository": "https://go.googlesource.com/crypto",
-			"revision": "3cb07270c9455e8ad27956a70891c962d121a228",
+			"revision": "9ef620b9ca2f82b55030ffd4f41327fa9e77a92c",
 			"branch": "master",
 			"path": "/openpgp"
 		},
 		{
+			"importpath": "golang.org/x/crypto/pbkdf2",
+			"repository": "https://go.googlesource.com/crypto",
+			"revision": "9ef620b9ca2f82b55030ffd4f41327fa9e77a92c",
+			"branch": "master",
+			"path": "/pbkdf2"
+		},
+		{
+			"importpath": "golang.org/x/crypto/ssh/terminal",
+			"repository": "https://go.googlesource.com/crypto",
+			"revision": "9ef620b9ca2f82b55030ffd4f41327fa9e77a92c",
+			"branch": "master",
+			"path": "/ssh/terminal"
+		},
+		{
 			"importpath": "golang.org/x/sys/unix",
 			"repository": "https://go.googlesource.com/sys",
-			"revision": "9a7256cb28ed514b4e1e5f68959914c4c28a92e0",
+			"revision": "f3918c30c5c2cb527c0b071a27c35120a6c0719a",
 			"branch": "master",
 			"path": "/unix"
 		},
 		{
 			"importpath": "golang.org/x/text/transform",
 			"repository": "https://go.googlesource.com/text",
-			"revision": "c3b0cbb40eb9a862fdc91f79bed8c7ac8e7a36e8",
+			"revision": "f4b4367115ec2de254587813edaa901bc1c723a8",
 			"branch": "master",
 			"path": "/transform"
 		},
 		{
 			"importpath": "golang.org/x/text/unicode/norm",
 			"repository": "https://go.googlesource.com/text",
-			"revision": "c3b0cbb40eb9a862fdc91f79bed8c7ac8e7a36e8",
+			"revision": "f4b4367115ec2de254587813edaa901bc1c723a8",
 			"branch": "master",
 			"path": "/unicode/norm"
 		},
 		{
 			"importpath": "gopkg.in/yaml.v2",
 			"repository": "https://gopkg.in/yaml.v2",
-			"revision": "a3f3340b5840cee44f372bddb5880fcbc419b46a",
+			"revision": "cd8b52f8269e0feb286dfeef29f8fe4d5b397e0b",
 			"branch": "v2"
 		}
 	]

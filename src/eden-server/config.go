@@ -39,13 +39,22 @@ func getHomeDir() string {
 
 func getConfig() {
   viper.SetConfigName("eden")
-  viper.AddConfigPath(getHomeDir() + "/.eden/server")
+  viper.AddConfigPath(configDir)
   err := viper.ReadInConfig()
   if err != nil {
     panic(err)
   } else {
-    facebookID = viper.GetString("facebook.id")
-    facebookPageAccessToken = viper.GetString("facebook.pageAccessToken")
-    facebookVerifyToken = viper.GetString("facebook.verifyToken")
+    serverAddress = viper.GetString("Server.ServerAddress")
+    tcpPort = viper.GetString("Server.TCPPort")
+    httpPort = viper.GetString("Server.HTTPPort")
+    tlsCert = viper.GetString("Server.TLSCert")
+    tlsKey = viper.GetString("Server.TLSKey")
+    mysqlUser = viper.GetString("Server.MySQLUser")
+    mysqlPass = viper.GetString("Server.MySQLPass")
+    mysqlConnType = viper.GetString("Server.MySQLConnType")
+    mysqlConnPath = viper.GetString("Server.MySQLConnPath")
+    facebookID = viper.GetString("Facebook.ID")
+    facebookPageAccessToken = viper.GetString("Facebook.PageAccessToken")
+    facebookVerifyToken = viper.GetString("Facebook.VerifyToken")
   }
 }

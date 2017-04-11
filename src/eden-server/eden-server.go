@@ -27,19 +27,37 @@
 
 package main
 
-import (
-  "golang.org/x/sys/unix"
+import(
+  "crypto/x509"
+  "database/sql"
+)
+
+const (
+  version = "0.1.0"
 )
 
 var (
-  facebookID string
-  facebookPageAccessToken string
-  facebookVerifyToken string
+  configDir, httpPort, serverAddress, tcpPort, tlsCert, tlsKey string
+  mysqlUser, mysqlPass, mysqlConnType, mysqlConnPath string
+  facebookID, facebookPageAccessToken, facebookVerifyToken string
+  dbKey []byte
+  aesGCMIV int64
+  clients []clientDecrypted
+  caCertPool *x509.CertPool
+  socketList []connection
+  db *sql.DB
+  iterations = 100000
+  flags flagVals
 )
 
 func main() {
-  unix.Mlockall(unix.MCL_CURRENT | unix.MCL_FUTURE)
+  configDir = getHomeDir() + "/.eden/server"
+  getFlags()
   getConfig()
-  startWebhooks()
-  unix.Munlockall()
+  getDatabase()
+  setupDBKey()
+  getClients()
+  handleAfterPasswordFlags()
+  go startHTTPListen()
+  startTCPListen()
 }

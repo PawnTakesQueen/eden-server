@@ -34,6 +34,10 @@ import (
   "net/http"
 )
 
+func handleFacebookMessage(message messageRequest) {
+  return
+}
+
 func handleFacebook(w http.ResponseWriter, r *http.Request) {
   switch r.Method {
   case "GET":
@@ -51,16 +55,19 @@ func handleFacebook(w http.ResponseWriter, r *http.Request) {
     }
     for _, x := range req.Entries {
       for _, y := range x.Messaging {
-        sendMessage(y.Message.Text)
+        handleFacebookMessage(y.Message)
+        if y.Sender.ID == facebookID {
+          markSeen(y.Sender.ID)
+        }
       }
     }
   }
 }
 
-func sendMessage(message string) {
+func markSeen(id string) {
   var messageJSON apiResponse
-  messageJSON.Recipient.ID = facebookID
-  messageJSON.Message.Text = message
+  messageJSON.Recipient.ID = id
+  messageJSON.SenderAction = "mark_seen"
   jsonValue, _ := json.Marshal(messageJSON)
   http.Post("https://graph.facebook.com/v2.8/me/messages?access_token=" +
             facebookPageAccessToken, "application/json",
